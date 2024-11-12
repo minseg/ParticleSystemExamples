@@ -24,6 +24,6 @@ class Particle {
     }
 
     display() {
-@@ -31,35 +37,3 @@
+
     }
 }
