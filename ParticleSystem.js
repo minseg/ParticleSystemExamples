@@ -13,6 +13,12 @@ class ParticleSystem {
             p.applyForce(g);
         }
     }
+
+    applyForce(force) {
+        for (let p of this.particles) {
+            p.applyForce(force);
+        }
+    }
     run() {
         for (let i = this.particles.length-1; i >= 0; i--) {
             let p = this.particles[i];
@@ -20,6 +26,8 @@ class ParticleSystem {
             if (p.isDead()) {
               this.particles.splice(i, 1);
             }
-          }
+        }
     }
 }
+
+        
