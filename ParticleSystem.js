@@ -9,9 +9,7 @@ class ParticleSystem {
     }
 
     applyGravity(g) {
-        for (let p of this.particles) {
-            p.applyForce(g);
-        }
+        this.applyForce(g);
     }
 
     applyForce(force) {
@@ -19,6 +17,7 @@ class ParticleSystem {
             p.applyForce(force);
         }
     }
+
     run() {
         for (let i = this.particles.length-1; i >= 0; i--) {
             let p = this.particles[i];
@@ -26,8 +25,7 @@ class ParticleSystem {
             if (p.isDead()) {
               this.particles.splice(i, 1);
             }
-        }
+          }
     }
 }
-
         
